@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-sealed class JokesUiState {
+sealed class JokesUiState{
     object Idle : JokesUiState()  // initial state
     object Loading : JokesUiState()   // Fetching data
     data class Success(val jokes: List<Joke>) : JokesUiState()   //Data fetched successfully
